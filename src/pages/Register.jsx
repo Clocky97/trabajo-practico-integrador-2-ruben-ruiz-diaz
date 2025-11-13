@@ -58,7 +58,7 @@ export default function Register() {
         return;
       }
 
-      // Registro exitoso
+      // Registro completado
       reset();
       navigate("/home", { replace: true });
 
