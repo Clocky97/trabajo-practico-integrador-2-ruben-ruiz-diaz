@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { useForm } from "../../hooks/useForm";
-import Loading from "../../components/Loading";
+import { useForm } from "../hooks/useForm";
+import Loading from "../components/Loading";
 
 export default function Login() {
   const navigate = useNavigate();

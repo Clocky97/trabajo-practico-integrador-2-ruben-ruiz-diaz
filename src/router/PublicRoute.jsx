@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router";
 import Loading from "../components/Loading";
 
 export default function PublicRoute({ children }) {

@@ -9,32 +9,23 @@ export default function PrivateRoute({ children }) {
   });
 
   useEffect(() => {
-    let isMounted = true;
-
     const verifySession = async () => {
       try {
         const res = await fetch("/api/profile", {
           credentials: "include",
         });
 
-        if (isMounted) {
-          if (res.ok) {
-            setAuth({ loading: false, ok: true });
-          } else {
-            setAuth({ loading: false, ok: false });
-          }
-        }
-      } catch (error) {
-        if (isMounted) {
+        if (res.ok) {
+          setAuth({ loading: false, ok: true });
+        } else {
           setAuth({ loading: false, ok: false });
         }
+      } catch (error) {
+        setAuth({ loading: false, ok: false });
       }
     };
 
     verifySession();
-    return () => {
-      isMounted = false;
-    };
   }, []);
 
   if (auth.loading) return <Loading label="Verificando sesión..." />;

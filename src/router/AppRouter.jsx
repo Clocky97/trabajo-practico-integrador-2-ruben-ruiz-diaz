@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import PublicRoute from "./PublicRoute";
 import PrivateRoute from "./PrivateRoute";
 
-import Login from "../pages/auth/Login";
-import Register from "../pages/auth/Register";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 import Home from "../pages/Home";
 import Tasks from "../pages/Tasks";
 import Profile from "../pages/Profile";
